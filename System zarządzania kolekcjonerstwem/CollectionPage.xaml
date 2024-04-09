@@ -1,0 +1,50 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="System_zarządzania_kolekcjonerstwem.CollectionPage"
+             Title="CollectionPage">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+                .collectionItemsLabel {
+                    font-size: large;
+                    margin: 10 0 0 10;
+                    color: #333333;
+                }
+
+                .itemNameEntry {
+                    margin: 10;
+                }
+
+                .addItemButton {
+                    margin: 10;
+                    background-color: #4CAF50;
+                    color: white;
+                }
+
+                .scrollView {
+                    margin: 10;
+                }
+
+                .stackLayout {
+                    margin: 10;
+                    background-color: #f2f2f2;
+                    padding: 10;
+                    border-radius: 5;
+                }
+
+                .stackItem {
+                    margin-bottom: 5;
+                }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="Collection Items:" StyleClass="collectionItemsLabel" />
+        <Entry x:Name="ItemNameEntry" Placeholder="Enter Item Name" StyleClass="itemNameEntry" />
+        <Button Text="Add Item" Clicked="AddItemButton_Clicked" StyleClass="addItemButton" />
+        <ScrollView StyleClass="scrollView">
+            <StackLayout x:Name="ItemStackLayout" StyleClass="stackLayout"></StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
